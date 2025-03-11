@@ -1,0 +1,12 @@
+--- Content of c.txt ---
+--- content of C:\Users\Vampatapu Koushik\handson/1st Day\c.txt---
+
+
+--- content of C:\Users\Vampatapu Koushik\handson/1st Day\combined_output.txt---
+
+
+
+
+--- Content of combined_output.txt ---
+
+
