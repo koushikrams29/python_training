@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koushik's Notepad</title>
+    <style>
+       body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            padding-top: 30px;
+        }
+
+        .note-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-card h2 {
+            font-size: 2rem;
+            color: #343a40;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .note-card input,
+        .note-card textarea {
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .note-card button {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .note-card button:hover {
+            background-color: #218838;
+        }
+
+        .note-card .form-group {
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="note-card">
+            <h2>Share Your Note</h2>
+
+            <!-- Add Note Form -->
+            <form method="POST" action="/updatefortoday">
+                <div class="form-group">
+                    <label for="title">Note Title</label>
+                    <input type="text" id="title" name="title" class="form-control" placeholder="Enter Note Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Note Content</label>
+                    <textarea name="content" id="content" class="form-control" rows="6" placeholder="Enter Note Content" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Share Note</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
