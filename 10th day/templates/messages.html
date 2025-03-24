@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Messages</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .message-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+        .message-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .message-content {
+            font-size: 1rem;
+            white-space: pre-wrap; 
+        }
+        .message-time {
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body class="container mt-4">
+    <h2 class="text-center">All Messages</h2>
+
+    {% if messages %}
+        <div class="list-group">
+            {% for message in messages %}
+                <div class="message-box">
+                    <div class="message-header">
+                        {{ message.prompt }}
+                    </div>
+                    <div class="message-content">
+                        {{ message.message }}
+                    </div>
+                    <!-- <div class="message-time">
+                        <small>Received at: {{ message.timestamp }}</small>
+                    </div> -->
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No messages found.</p>
+    {% endif %}
+
+
+    <a href="/" class="btn btn-primary mt-4">Chat again !!</a>
+
+</body>
+</html>
